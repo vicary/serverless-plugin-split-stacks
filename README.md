@@ -62,6 +62,16 @@ custom:
 
 This plugin is not a substitute for fine-grained services - try to limit the size of your service. This plugin has a hard limit of 200 sub-stacks and does not try to create any kind of tree of nested stacks.
 
+This plugin splits on configurable limits for resources, outputs and parameters, with the following values as defaults.
+
+```yaml
+custom:
+  splitsStacks:
+    outputLimit: 200
+    parameterLimit: 200
+    resourceLimit: 500
+```
+
 ## Advanced Usage
 
 If you create a file in the root of your Serverless project called `stacks-map.js` this plugin will load it.
